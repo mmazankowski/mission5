@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mission5.Models;
 
@@ -13,14 +14,14 @@ namespace Mission4Assignment.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private MovieFormContext _blahContext { get; set; }
+        private MovieFormContext _mContext { get; set; }
 
         //Constructors
 
         public HomeController(ILogger<HomeController> logger, MovieFormContext someName)
         {
             _logger = logger;
-            _blahContext = someName;
+            _mContext = someName;
         }
 
         public IActionResult Index()
@@ -36,16 +37,28 @@ namespace Mission4Assignment.Controllers
         [HttpGet]
         public IActionResult MovieForm()
         {
+            ViewBag.Categories = _mContext.Categories.ToList();
+
             return View();
         }
 
         [HttpPost]
         public IActionResult MovieForm(FormResponses fr)
         {
-            _blahContext.Add(fr);
-            _blahContext.SaveChanges();
+            _mContext.Add(fr);
+            _mContext.SaveChanges();
 
             return View("Confirmation", fr);
+        }
+
+        public IActionResult MoviesList()
+        {
+            var movies = _mContext.Responses
+                .Include(x => x.Category)
+                .OrderBy(x => x.Title)
+                .ToList();
+
+            return View(movies); 
         }
 
         public IActionResult Privacy()

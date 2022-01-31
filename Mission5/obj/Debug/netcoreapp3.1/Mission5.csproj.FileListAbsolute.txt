@@ -79,3 +79,4 @@
 /Users/matthewmazankowski/Desktop/413-Mission/mission5/Mission5/obj/Debug/netcoreapp3.1/Mission5.dll
 /Users/matthewmazankowski/Desktop/413-Mission/mission5/Mission5/obj/Debug/netcoreapp3.1/Mission5.pdb
 /Users/matthewmazankowski/Desktop/413-Mission/mission5/Mission5/obj/Debug/netcoreapp3.1/Mission5.genruntimeconfig.cache
+/Users/matthewmazankowski/Desktop/413-Mission/mission5/Mission5/obj/Debug/netcoreapp3.1/Razor/Views/Home/MoviesList.cshtml.g.cs

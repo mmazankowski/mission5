@@ -7,7 +7,13 @@
           <Node name="Mission5" expanded="True">
             <Node name="Mission5" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Movies.sqlite" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="MoviesList.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
