@@ -1,25 +1,11 @@
 ﻿<Properties StartupConfiguration="{28C748C0-6698-4985-BBE7-F4EF16B8E283}|Mission4Assignment">
   <MonoDevelop.Ide.ItemProperties.Mission5 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
-    <Files>
-      <File FileName="Views/Home/Delete.cshtml" Line="9" Column="42" />
-      <File FileName="Controllers/HomeController.cs" Line="96" Column="107" />
-      <File FileName="Views/Home/MoviesList.cshtml" Line="41" Column="14" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Mission5" expanded="True">
-            <Node name="Mission5" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="Mission5" expanded="True" />
           </Node>
         </State>
       </Pad>
