@@ -1,11 +1,28 @@
 ﻿<Properties StartupConfiguration="{28C748C0-6698-4985-BBE7-F4EF16B8E283}|Mission4Assignment">
   <MonoDevelop.Ide.ItemProperties.Mission5 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/MoviesList.cshtml">
+    <Files>
+      <File FileName="Models/FormResponses.cs" Line="1" Column="1" />
+      <File FileName="Models/MovieFormContext.cs" Line="1" Column="1" />
+      <File FileName="Models/Category.cs" Line="1" Column="1" />
+      <File FileName="Controllers/HomeController.cs" Line="96" Column="80" />
+      <File FileName="Views/Home/MoviesList.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/MovieForm.cshtml" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Mission5" expanded="True">
-            <Node name="Mission5" expanded="True" />
+            <Node name="Mission5" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="MoviesList.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

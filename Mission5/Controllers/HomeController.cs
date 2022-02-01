@@ -93,7 +93,7 @@ namespace Mission5.Controllers
         [HttpGet]
         public IActionResult Delete(int movieid)
         {
-            var movie = _mContext.Responses.Single(x => x.MovieId == movieid); //this is where I am at 8:04 on video 6
+            var movie = _mContext.Responses.Single(x => x.MovieId == movieid); 
 
             return View(movie); 
         }
