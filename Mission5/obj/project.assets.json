@@ -1206,7 +1206,7 @@
       "outputPath": "/Users/matthewmazankowski/Desktop/413-Mission/mission5/Mission5/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/matthewmazankowski/.nuget/NuGet/NuGet.Config"
+        "/Users/matthewmazankowski/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

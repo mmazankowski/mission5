@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mission5.Models;
 
-namespace Mission4Assignment.Controllers
+namespace Mission5.Controllers
 {
     public class HomeController : Controller
     {
@@ -45,12 +45,22 @@ namespace Mission4Assignment.Controllers
         [HttpPost]
         public IActionResult MovieForm(FormResponses fr)
         {
-            _mContext.Add(fr);
-            _mContext.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _mContext.Add(fr);
+                _mContext.SaveChanges();
 
-            return View("Confirmation", fr);
+                return View("Confirmation", fr);
+            }
+            else // If Invalid 
+            {
+                ViewBag.Categories = _mContext.Categories.ToList();
+
+                return View(); 
+            }
         }
 
+        [HttpGet]
         public IActionResult MoviesList()
         {
             var movies = _mContext.Responses
@@ -59,6 +69,39 @@ namespace Mission4Assignment.Controllers
                 .ToList();
 
             return View(movies); 
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int movieid)
+        {
+            ViewBag.Categories = _mContext.Categories.ToList();
+
+            var movie = _mContext.Responses.Single(x => x.MovieId == movieid); 
+
+            return View("MovieForm", movie);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(FormResponses fm)
+        {
+            _mContext.Update(fm);
+            _mContext.SaveChanges();
+
+            return RedirectToAction("MoviesList");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int movieid)
+        {
+            _mContext.Responses.Single(x => x.MovieId == movieid); //this is where I am at 8:04 on video 6
+
+            return View(); 
+        }
+
+        [HttpPost]
+        public IActionResult Delete()
+        {
+            return View();
         }
 
         public IActionResult Privacy()
